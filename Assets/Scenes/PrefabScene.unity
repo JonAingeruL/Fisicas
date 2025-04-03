@@ -517,7 +517,7 @@ GameObject:
   - component: {fileID: 1749028170}
   m_Layer: 0
   m_Name: Plane (2)
-  m_TagString: Untagged
+  m_TagString: Suelo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -672,6 +672,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2125839980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125839977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e481a8af58320b74d81c041d3329609f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  efectoExplosion: {fileID: 2125839977}
 --- !u!1001 &1949396538504098877
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -842,6 +855,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3740075841134300451, guid: e45fdeb592197f5418bca88abf48ebce, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2125839978}
+    - targetCorrespondingSourceObject: {fileID: 3740075841134300451, guid: e45fdeb592197f5418bca88abf48ebce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2125839980}
   m_SourcePrefab: {fileID: 100100000, guid: e45fdeb592197f5418bca88abf48ebce, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
