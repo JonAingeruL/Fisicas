@@ -9,6 +9,7 @@ public class MovimientoCapsula : MonoBehaviour
 
     void Start()
     {
+        
         rb = GetComponent<Rigidbody>();
     }
 
@@ -19,7 +20,7 @@ public class MovimientoCapsula : MonoBehaviour
         float movimientoZ = Input.GetAxis("Vertical") * velocidadMovimiento * Time.deltaTime;
         transform.Translate(new Vector3(movimientoX, 0, movimientoZ));
 
-        // Salto
+        // Salto (Con esto miro a ver si esta tocando el suelo para que no sale todo el rato)
         if (Input.GetKeyDown(KeyCode.Space) && enSuelo)
         {
             rb.AddForce(Vector3.up * fuerza, ForceMode.Impulse);
@@ -29,6 +30,7 @@ public class MovimientoCapsula : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+        //Y con esto compruebo que el objeto que sea con el tag Suelo si lo toca se active la variabel
         if (collision.gameObject.CompareTag("Suelo"))
         {
             enSuelo = true;
